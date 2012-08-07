@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{FEE8265F-06DA-4DB2-AB0C-B6B899292A88}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{2118547A-1760-48CA-9580-C7C4634C85E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NIssues.Web", "Web\NIssues.Web\NIssues.Web.csproj", "{929E41F9-38C4-4BAA-B3DD-17CDB0812542}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NIssues.Web.Tests", "Web\NIssues.Web.Tests\NIssues.Web.Tests.csproj", "{183A43F9-2183-4EB5-9000-CE74C6285D0E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{C99DCE71-06F7-401E-9E8B-962D4F5055E0}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+		.nuget\nuget.exe = .nuget\nuget.exe
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NIssues.Common", "Shared\NIssues.Common\NIssues.Common.csproj", "{EDE478E4-A5FD-4CBB-8F7B-D59BFB0D387A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{183A43F9-2183-4EB5-9000-CE74C6285D0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{183A43F9-2183-4EB5-9000-CE74C6285D0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{183A43F9-2183-4EB5-9000-CE74C6285D0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{183A43F9-2183-4EB5-9000-CE74C6285D0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{929E41F9-38C4-4BAA-B3DD-17CDB0812542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{929E41F9-38C4-4BAA-B3DD-17CDB0812542}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{929E41F9-38C4-4BAA-B3DD-17CDB0812542}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{929E41F9-38C4-4BAA-B3DD-17CDB0812542}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDE478E4-A5FD-4CBB-8F7B-D59BFB0D387A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDE478E4-A5FD-4CBB-8F7B-D59BFB0D387A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDE478E4-A5FD-4CBB-8F7B-D59BFB0D387A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDE478E4-A5FD-4CBB-8F7B-D59BFB0D387A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{183A43F9-2183-4EB5-9000-CE74C6285D0E} = {2118547A-1760-48CA-9580-C7C4634C85E1}
+		{929E41F9-38C4-4BAA-B3DD-17CDB0812542} = {2118547A-1760-48CA-9580-C7C4634C85E1}
+		{EDE478E4-A5FD-4CBB-8F7B-D59BFB0D387A} = {FEE8265F-06DA-4DB2-AB0C-B6B899292A88}
+	EndGlobalSection
+EndGlobal
