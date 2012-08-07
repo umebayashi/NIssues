@@ -1,0 +1,51 @@
+[Project]
+	<Prop>
+		Name
+		ParentProject
+		Description
+	<Func>
+		GetRoles
+		GetUsers
+		GetTrackers
+		GetVersions
+
+[Version]
+	<Prop>
+		Project
+		Name
+		Description
+		Status
+		DueDate
+
+[Ticket]
+	<Prop>
+		Tracker
+		Name
+		Description
+		Status,
+		Priority
+		InCharge
+		Category
+		TargetVersion
+		ParentTicket
+		StartDate
+		DueDate
+		EstimatedHours
+		Progress
+
+[Tracker]
+	<Prop>
+		Name
+
+[Privilege]
+	<Prop>
+
+[Role]
+	<Prop>
+	<Func>
+		GetPrivileges
+
+[User]
+	<Prop>
+	<Func>
+		GetRoles

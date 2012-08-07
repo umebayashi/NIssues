@@ -18,6 +18,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{C99DCE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NIssues.Common", "Shared\NIssues.Common\NIssues.Common.csproj", "{EDE478E4-A5FD-4CBB-8F7B-D59BFB0D387A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Design", "Design", "{74681DEC-1741-4840-A77E-0B8E1F56AB55}"
+	ProjectSection(SolutionItems) = preProject
+		Design\NIssuesModel.txt = Design\NIssuesModel.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
