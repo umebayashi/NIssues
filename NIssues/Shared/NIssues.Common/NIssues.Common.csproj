@@ -39,7 +39,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domains\Privilege.cs" />
+    <Compile Include="Domains\Project.cs" />
+    <Compile Include="Domains\Role.cs" />
+    <Compile Include="Domains\Ticket.cs" />
+    <Compile Include="Domains\TicketCategory.cs" />
+    <Compile Include="Domains\TicketPriority.cs" />
+    <Compile Include="Domains\TicketStatus.cs" />
+    <Compile Include="Domains\Tracker.cs" />
+    <Compile Include="Domains\User.cs" />
+    <Compile Include="Domains\Version.cs" />
+    <Compile Include="Domains\VersionStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

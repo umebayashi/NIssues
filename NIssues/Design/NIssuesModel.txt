@@ -19,9 +19,9 @@
 
 [Ticket]
 	<Prop>
-		Tracker
 		Name
 		Description
+		Tracker
 		Status,
 		Priority
 		InCharge
