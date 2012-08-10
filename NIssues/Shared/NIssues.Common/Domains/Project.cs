@@ -1,19 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 
 namespace NIssues.Common.Domains
 {
+	[Table("Project")]
 	public class Project
 	{
 		#region field
 
+		[Column("ID", TypeName = "uniqueidentifier")]
+		[Key]
 		public Guid ID { get; set; }
 
+		[Column("Name", TypeName = "nvarchar")]
 		public string Name { get; set; }
 
+		[Column("Description", TypeName = "nvarchar")]
 		public string Description { get; set; }
 
+		[Column("ParentID", TypeName = "uniqueidentifier")]
+		[ForeignKey("Parent")]
 		public Guid? ParentID { get; set; }
 
 		#endregion
@@ -22,13 +31,30 @@ namespace NIssues.Common.Domains
 
 		public virtual Project Parent { get; set; }
 
-		public virtual ICollection<Role> Roles { get; set; }
+		public IEnumerable<Role> GetRoles()
+		{
+			throw new NotImplementedException();
+		}
 
-		public virtual ICollection<User> Users { get; set; }
+		public IEnumerable<User> GetUsers()
+		{
+			throw new NotImplementedException();
+		}
 
-		public virtual ICollection<Tracker> Trackers { get; set; }
+		public IEnumerable<Tracker> GetTrackers()
+		{
+			throw new NotImplementedException();
+		}
 
-		public virtual ICollection<Version> Versions { get; set; }
+		public IEnumerable<Version> GetVersions()
+		{
+			throw new NotImplementedException();
+		}
+
+		public IEnumerable<Project> GetChildren()
+		{
+			throw new NotImplementedException();
+		}
 
 		#endregion
 
