@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using NIssues.Common.Repositories;
 
 namespace NIssues.Common.Domains
 {
-	public class Role
+	public class Role : DomainObject
 	{
 		#region field
 
@@ -15,9 +15,18 @@ namespace NIssues.Common.Domains
 
 		#endregion
 
+		#region repository
+
+		public IPrivilegeRepository PrivilegeRepository { get; set; }
+
+		#endregion
+
 		#region relation
 
-		public virtual ICollection<Privilege> Privileges { get; set; }
+		public IEnumerable<Privilege> GetPrivileges()
+		{
+			return this.PrivilegeRepository.GetRolePrivileges(this.ID);
+		}
 
 		#endregion
 	}

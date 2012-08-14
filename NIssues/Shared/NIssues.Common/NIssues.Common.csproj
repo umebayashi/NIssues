@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domains\DomainObject.cs" />
     <Compile Include="Domains\Privilege.cs" />
     <Compile Include="Domains\Project.cs" />
     <Compile Include="Domains\Role.cs" />
@@ -55,9 +56,17 @@
     <Compile Include="Domains\TicketStatus.cs" />
     <Compile Include="Domains\Tracker.cs" />
     <Compile Include="Domains\User.cs" />
-    <Compile Include="Domains\Version.cs" />
-    <Compile Include="Domains\VersionStatus.cs" />
+    <Compile Include="Domains\ProjectVersion.cs" />
+    <Compile Include="Domains\ProjectVersionStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IBaseRepository.cs" />
+    <Compile Include="Repositories\IPrivilegeRepository.cs" />
+    <Compile Include="Repositories\IProjectRepository.cs" />
+    <Compile Include="Repositories\IProjectVersionRepository.cs" />
+    <Compile Include="Repositories\IRoleRepository.cs" />
+    <Compile Include="Repositories\ITicketRepository.cs" />
+    <Compile Include="Repositories\ITrackerRepository.cs" />
+    <Compile Include="Repositories\IUserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

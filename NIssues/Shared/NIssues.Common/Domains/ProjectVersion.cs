@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using NIssues.Common.Repositories;
 
 namespace NIssues.Common.Domains
 {
 	[Table("Version")]
-	public class Version
+	public class ProjectVersion : DomainObject
 	{
 		#region field / property
 
@@ -33,11 +34,17 @@ namespace NIssues.Common.Domains
 
 		#endregion
 
+		#region repository
+
+		public ITicketRepository TicketRepository { get; set; }
+
+		#endregion
+
 		#region relation
 
 		public virtual Project Project { get; set; }
 
-		public virtual VersionStatus Status { get; set; }
+		public virtual ProjectVersionStatus Status { get; set; }
 
 		#endregion
 
@@ -45,7 +52,7 @@ namespace NIssues.Common.Domains
 
 		public IEnumerable<Ticket> GetTickets()
 		{
-			throw new NotImplementedException();
+			return this.TicketRepository.GetTickets(this.ID);
 		}
 
 		#endregion

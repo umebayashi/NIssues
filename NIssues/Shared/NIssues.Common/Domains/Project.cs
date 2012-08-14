@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using NIssues.Common.Repositories;
 
 namespace NIssues.Common.Domains
 {
 	[Table("Project")]
-	public class Project
+	public class Project : DomainObject
 	{
 		#region field
 
@@ -27,33 +28,47 @@ namespace NIssues.Common.Domains
 
 		#endregion
 
+		#region repository
+
+		public IProjectRepository ProjectRepository { get; set; }
+
+		public IRoleRepository RoleRepository { get; set; }
+
+		public IUserRepository UserRepository { get; set; }
+
+		public ITrackerRepository TrackerRepository { get; set; }
+
+		public IProjectVersionRepository VersionRepository { get; set; }
+
+		#endregion
+
 		#region relation
 
 		public virtual Project Parent { get; set; }
 
 		public IEnumerable<Role> GetRoles()
 		{
-			throw new NotImplementedException();
+			return this.RoleRepository.GetRoles(this.ID);
 		}
 
 		public IEnumerable<User> GetUsers()
 		{
-			throw new NotImplementedException();
+			return this.UserRepository.GetUsers(this.ID);
 		}
 
 		public IEnumerable<Tracker> GetTrackers()
 		{
-			throw new NotImplementedException();
+			return this.TrackerRepository.GetTrackers(this.ID);
 		}
 
-		public IEnumerable<Version> GetVersions()
+		public IEnumerable<ProjectVersion> GetVersions()
 		{
-			throw new NotImplementedException();
+			return this.VersionRepository.GetVersions(this.ID);
 		}
 
 		public IEnumerable<Project> GetChildren()
 		{
-			throw new NotImplementedException();
+			return this.ProjectRepository.GetChildProjects(this.ID);
 		}
 
 		#endregion

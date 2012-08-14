@@ -7,7 +7,7 @@ using System.Linq;
 namespace NIssues.Common.Domains
 {
 	[Table("Tracker")]
-	public class Tracker
+	public class Tracker : DomainObject
 	{
 		#region field
 

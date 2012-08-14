@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace NIssues.Common.Domains
 {
-	public class VersionStatus
+	public class ProjectVersionStatus
 	{
 		#region field / property
 

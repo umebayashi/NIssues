@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace NIssues.Common.Domains
 {
-	public class Ticket
+	public class Ticket : DomainObject
 	{
 		#region field
 
@@ -73,7 +73,7 @@ namespace NIssues.Common.Domains
 
 		public virtual TicketCategory Category { get; set; }
 
-		public virtual Version TargetVersion { get; set; }
+		public virtual ProjectVersion TargetVersion { get; set; }
 
 		public virtual Ticket Parent { get; set; }
 
