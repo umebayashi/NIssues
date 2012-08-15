@@ -7,7 +7,7 @@ using NIssues.Common.Repositories;
 
 namespace NIssues.Common.Domains
 {
-	[Table("Project")]
+	[Table("Projects")]
 	public class Project : DomainObject
 	{
 		#region field

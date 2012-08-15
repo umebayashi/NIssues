@@ -6,11 +6,13 @@ using System.Linq;
 
 namespace NIssues.Common.Domains
 {
+	[Table("Tickets")]
 	public class Ticket : DomainObject
 	{
 		#region field
 
 		[Column("ID", TypeName = "uniqueidentifier")]
+		[Key]
 		public Guid ID { get; set; }
 
 		[Column("Name", TypeName = "nvarchar")]

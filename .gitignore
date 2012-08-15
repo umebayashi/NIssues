@@ -3,6 +3,8 @@ bin
 obj
 *.suo
 *.user
+*.mdf
+*.ldf
 
 # mstest test results
 TestResults
